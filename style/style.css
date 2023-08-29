@@ -1,0 +1,16 @@
+#rozsahOd{
+    width: 200px;
+}
+
+
+#vysledky{
+    width: 330px;
+    height: 420px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: black;
+}
+
+#qm{
+  width: 30px;  
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomáš Sobota">
+    <meta name="keywords" content="RBC, Downloader, Tomáš Sobota">
+    <meta name="description" content="Aplikace v Typescriptu stahující udaje o zadané RBC baterii ze stranky avacom.cz">
+    <meta property="og:title" content="Rbc downloader v Typescriptu.">
+    <meta property="og:description" content="Rbc downloader v Typescriptu.">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>RBC Downloader</title>
+</head>
+
+<body class="bg-info">
+    <div class="container min-vh-100 mb-5">
+
+        <div>
+            <div class="d-flex flex-column align-items-center">
+
+                <div class="text-center">
+                    <img src="img/logo.png" alt="logo" class="" style="width: 300px;">
+                </div>
+
+                <div class="m-2 text-center">
+                    <p>Aplikace zobrazuje informace o požadované baterii RBC. Program prohledá danou stránku na avacom.cz a vytáhne z ní příslušná data.</p>
+                    <p>Pro správné fungování je potřeba dočasně požádat o cors proxy
+                        <a href="https://cors-anywhere.herokuapp.com/corsdemo" class="text-danger" target="_blank">zde</a>
+                    </p>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row gap-3">
+                    <div class="d-flex gap-2 justify-content-center align-items-center">
+                      
+                        <img src="img/qm.png" alt="question mark" id="qm" data-toggle="tooltip"  title="Zadejte jen číslo hledaného RBC (1-150)">
+
+                        <span class="fw-bold">RBC</span>
+
+                        <input type="number" id="rozsahOd" class="form-control">
+                        <!-- <input type="checkbox" id="setCheckbox" class="form-check-input">
+                        <span>SET</span> -->
+                            
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <input type="button" class="btn btn-dark" id="startButton" value="Vyhledat">
+                </div>
+
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <div id="vysledky" class="d-flex justify-content-center align-items-center">
+                        <span class="text-white">................</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <footer class="mt-md-5 small text-center bg-dark p-2">
+        <div class="d-flex justify-content-center align-items-center ">
+            <span><a class="text-white text-decoration-none" target="_blank" href="http://www.tsobota.cz">&copy;Design and
+                    code by Tomas Sobota</a></span>
+    
+        </div>
+    
+    </footer>
+    
+
+
+
+    <script type="module" src="script/script.js"></script>
+    <link href="style/style.css" rel="stylesheet">
+    <script>
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+
+
+
+
+</body>
+
+</html>
